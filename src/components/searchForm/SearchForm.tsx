@@ -1,9 +1,10 @@
 import { Box } from '@mui/system';
-import { TextField, Button, makeStyles } from '@mui/material';
+import { TextField } from '@mui/material';
 import { useState } from 'react';
 import './SearchForm.css';
 
 const SearchForm = (props: { onUpdateSearch: Function }) => {
+    // eslint-disable-next-line
     const [term, setTerm] = useState('');
 
     const onUpdateSearch = (e: any) => {

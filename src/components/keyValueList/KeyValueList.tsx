@@ -1,6 +1,6 @@
 import List from '@mui/material/List';
 import Grid from '@mui/material/Grid';
-import { Box, ListItem, ListItemText, Typography } from '@mui/material';
+import { Box, ListItem, ListItemText } from '@mui/material';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import KeyValueItem from '../keyValueItem/KeyValueItem';
