@@ -26,49 +26,39 @@ const KeyValueList = (props: { data: any, onDelete: Function }) => {
     return (
         <Box sx={{
             p: 2,
-            pb: 8,
+            pb: 3,
             width: '133ch',
             ml: 3,
-            mt: 8,
             boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
-            backgroundColor: '#fff'
+            bgcolor: '#fff'
         }}>
-            <Grid item xs={12} md={6} mt={5}>
+            <Grid item xs={12} md={6} mt={1}>
 
                 <List>
                     <ListItem
                         sx={{
                             p: 2,
-                            m: '0 auto',
-                            width: '125ch',
-                            backgroundColor: '#486776',
+                            width: '100%',
+                            mb: 2,
+                            bgcolor: '#486776',
                             borderRadius: '5px'
-
                         }}
                     >
                         <ListItemText
                             primaryTypographyProps={{ style: text }}
                             primary='Key'
                             sx={{
-                                ml: 2,
+                                ml: 4
                             }}
-
-
                         />
                         <ListItemText
                             primaryTypographyProps={{ style: text }}
                             primary='Value'
-                            sx={{
-                                ml: 2,
-                            }}
                         />
 
                         <ListItemText
                             primaryTypographyProps={{ style: text }}
                             primary='Type'
-                            sx={{
-                                ml: 2,
-                            }}
                         />
                     </ListItem>
                     {elements}

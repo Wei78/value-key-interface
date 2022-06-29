@@ -1,6 +1,7 @@
 import { Box } from '@mui/system';
 import { TextField, Button, makeStyles } from '@mui/material';
 import { useState } from 'react';
+import './SearchForm.css';
 
 const SearchForm = (props: { onUpdateSearch: Function }) => {
     const [term, setTerm] = useState('');
@@ -13,55 +14,26 @@ const SearchForm = (props: { onUpdateSearch: Function }) => {
 
     return (
         <Box sx={{
-            position: 'absolute',
-            width: 345,
-            height: 80,
-            ml: '75%',
-            mt: -13,
-            pl: 2,
-            boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
-            backgroundColor: '#fff'
-
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'flex-start',
+            width: '100%',
+            bgcolor: '#486776',
+            boxShadow: 'rgba(0, 0, 0, 0.35) 0px 0px 15px',
+            mb: 4,
+            p: 2
         }}>
             <TextField
                 id="outlined-basic"
-                label="Search by name..."
+                className="inputRounded"
+                placeholder="Search..."
                 variant="outlined"
-                sx={{ width: '30ch', mt: 2 }}
-                InputLabelProps={{
-                    style: {
-                        ...({ top: `${-2}px` }),
-                    },
-                }}
-                inputProps={{
-                    style: {
-                        height: 50,
-                        padding: '0 5px',
-                    },
+                size="small"
+                sx={{
+                    width: '40ch',
                 }}
                 onChange={onUpdateSearch}
             />
-            <Button
-                sx={{
-                    height: 50,
-                    width: '9ch',
-                    ml: 2,
-                    mt: 2,
-                    backgroundColor: '#486776',
-                    color: '#f1f3db',
-                    fontWeight: 'bold',
-                    '&:hover': {
-                        backgroundColor: '#4a7c94',
-                        color: '#f1f3db',
-
-                    },
-
-                }}
-                variant='contained'
-                type='submit'
-            >
-                OK
-            </Button>
         </Box>
     )
 }

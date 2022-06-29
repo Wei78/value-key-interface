@@ -27,9 +27,7 @@ const TabAddInput = (props: { tabs: any, setTabs: any }) => {
                         size="medium"
                         {...bindTrigger(popupState)}
                         sx={{
-                            position: 'absolute',
-                            mt: -5.6,
-                            ml: '103%',
+                            ml: 1.5,
                             bgcolor: '#486776',
                             boxShadow: 'rgba(0, 0, 0, 0.35) 0px 3px 12px;',
                             color: '#f1f3db',

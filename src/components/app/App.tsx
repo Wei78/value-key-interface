@@ -17,7 +17,6 @@ function App() {
   const [listItems, setListItems] = useState(initialValue);
   const [term, setTerm] = useState('');
 
-
   const deleteItem = (id: string) => {
     setListItems(listItems.filter((item: any) => item.id !== id))
   }
@@ -51,13 +50,14 @@ function App() {
 
   return (
     <div className="App">
+      <SearchForm onUpdateSearch={onUpdateSearch} />
       <CreateForm onAdd={addItem} />
       <KeyValueTabs />
       <KeyValueList
         data={visibleData}
         onDelete={deleteItem}
       />
-      <SearchForm onUpdateSearch={onUpdateSearch} />
+
     </div>
   );
 }
