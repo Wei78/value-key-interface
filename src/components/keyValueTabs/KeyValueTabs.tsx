@@ -2,8 +2,8 @@ import { useState } from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
-import AddIcon from '@mui/icons-material/Add';
-import { IconButton } from '@mui/material';
+import TabAddInput from '../tabAddInput/TabAddInput';
+import TabDeleteInput from '../tabDeleteInput/TabDeleteInput';
 
 export default function KeyValueTabs() {
     const [value, setValue] = useState(0);
@@ -46,25 +46,8 @@ export default function KeyValueTabs() {
                     />
                 })}
             </Tabs>
-            <IconButton
-                aria-label="delete"
-                size="medium"
-                sx={{
-                    position: 'absolute',
-                    mt: -5.6,
-                    ml: '102%',
-                    bgcolor: '#486776',
-                    boxShadow: 'rgba(0, 0, 0, 0.35) 0px 3px 12px;',
-                    color: '#f1f3db',
-                    '&:hover': {
-                        backgroundColor: '#4a7c94',
-                        color: '#d7d8ae',
-
-                    },
-                }}
-            >
-                <AddIcon />
-            </IconButton>
+            <TabAddInput tabs={tabs} setTabs={setTabs} />
+            <TabDeleteInput tabs={tabs} setTabs={setTabs} />
         </Box>
     );
 }
