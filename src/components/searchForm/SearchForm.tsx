@@ -1,5 +1,6 @@
 import { Box } from '@mui/system';
-import { TextField } from '@mui/material';
+import { InputAdornment, TextField, Typography } from '@mui/material';
+import SearchIcon from '@mui/icons-material/Search';
 import { useState } from 'react';
 import './SearchForm.css';
 
@@ -24,6 +25,14 @@ const SearchForm = (props: { onUpdateSearch: Function }) => {
             mb: 4,
             p: 2
         }}>
+            <Typography
+                variant="h5"
+                sx={{
+                    color: '#f1f3db',
+                }}
+            >
+                Configuration Manager
+            </Typography>
             <TextField
                 id="outlined-basic"
                 className="inputRounded"
@@ -32,6 +41,19 @@ const SearchForm = (props: { onUpdateSearch: Function }) => {
                 size="small"
                 sx={{
                     width: '40ch',
+                    ml: 3,
+                    "& .MuiOutlinedInput-root": {
+                        "& > fieldset": {
+                            border: '2px solid #4a7c94'
+                        },
+                    },
+                }}
+                InputProps={{
+                    startAdornment: (
+                        <InputAdornment position="start">
+                            <SearchIcon />
+                        </InputAdornment>
+                    ),
                 }}
                 onChange={onUpdateSearch}
             />
